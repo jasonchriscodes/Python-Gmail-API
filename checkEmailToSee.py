@@ -49,8 +49,7 @@ def main():
      print("Messages:") 
     # for label in labels:
     for message in messages[:message_count]:
-     msg = service.users().messages().get(userId='me', i6
-     d=message['id']).execute()
+     msg = service.users().messages().get(userId='me', id=message['id']).execute()
      print(msg['snippet'])
      print("\n")
      time.sleep(2)
